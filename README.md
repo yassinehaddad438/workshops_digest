@@ -1,16 +1,52 @@
-# React + Vite
+# Workshop Digest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Workshop Digest is a React + Vite web application for discovering free workshops and subscribing to a daily digest email.
 
-Currently, two official plugins are available:
+## What this repository contains
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This repository contains the **frontend client**:
 
-## React Compiler
+- Landing page with latest workshops
+- Workshops listing with search and source filtering
+- Email subscription page
+- Navigation and reusable UI components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The app reads and writes data through Supabase (configured via environment variables).
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 19
+- Vite
+- React Router
+- TanStack Query
+- Supabase JavaScript client
+- Zustand
+- ESLint
+
+## Getting started
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Create a `.env` file in the project root and set:
+
+```env
+VITE_SUPABASE_URL=your_supabase_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+3. Start development server:
+
+```bash
+npm run dev
+```
+
+## Available scripts
+
+- `npm run dev` – start local dev server
+- `npm run build` – create production build
+- `npm run preview` – preview production build locally
+- `npm run lint` – run ESLint
