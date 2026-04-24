@@ -38,6 +38,7 @@ export default function Navbar() {
       <div style={{ display: 'flex', gap: '24px', alignItems: 'center' }}>
         {link('/workshops', 'Browse')}
         {link('/subscribe', 'Subscribe')}
+        {link('/cahier-des-charges', 'Cahier des charges')}
         <Link to="/subscribe" style={{
           background: '#1a75ff',
           color: 'white',
