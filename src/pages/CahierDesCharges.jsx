@@ -185,17 +185,17 @@ const sections = [
   },
 ]
 
-function buildLines(doc, items, x, maxWidth) {
+function buildLines(doc, textContent, x, maxWidth) {
   const lines = []
-  if (Array.isArray(items)) {
-    items.forEach(item => {
+  if (Array.isArray(textContent)) {
+    textContent.forEach(item => {
       const wrapped = doc.splitTextToSize(item, maxWidth)
-      wrapped.forEach(l => lines.push({ text: l, x }))
+      wrapped.forEach(line => lines.push({ text: line, x }))
       lines.push({ text: '', x })
     })
   } else {
-    const wrapped = doc.splitTextToSize(items, maxWidth)
-    wrapped.forEach(l => lines.push({ text: l, x }))
+    const wrapped = doc.splitTextToSize(textContent, maxWidth)
+    wrapped.forEach(line => lines.push({ text: line, x }))
     lines.push({ text: '', x })
   }
   return lines
